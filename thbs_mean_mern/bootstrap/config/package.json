@@ -1,0 +1,16 @@
+{
+  "name": "thbs",
+  "version": "1.0.0",
+  "description": "this is demo bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sandy",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "moment": "^2.29.1",
+    "react": "^17.0.2"
+  }
+}

@@ -1,0 +1,33 @@
+<p>switch works!</p>
+<ul>
+    <h2>I am *ngSwitch case</h2>
+
+    <li *ngFor=" let item of person" [ngSwitch]="item.country">
+
+        <div *ngSwitchCase="'IND'" class="text-primary">I am in India</div>
+
+        <div *ngSwitchCase="'USA'" class="text-info">I am in USA</div>
+
+        <div *ngSwitchCase="'Asia'" class="text-danger">I am in Asia</div>
+
+        <div *ngSwitchDefault="'Eurap'" class="text-success">I am not in any country</div>
+    </li>
+</ul>
+
+<ul>
+    <h2>I am *ngStyle with switch case in .ts file</h2>
+    <li *ngFor="let item of person" [ngSwitch]="item.country">
+        <div [ngStyle]="{'color':getColors(item.country)}">my name is {{item.name}} and I am from {{item.country}}</div>
+    </li>
+</ul>
+
+<ul>
+    <h2>I am ngClass dynamics</h2>
+    <li *ngFor ="let item of person">
+        <div [ngClass]="{
+           'text-primary':item.country ==='IND',
+           'text-danger' :item.country ==='USA'
+        }"> My name is {{item.name}} and I am from {{item.country}}
+    </div>
+    </li>
+</ul>

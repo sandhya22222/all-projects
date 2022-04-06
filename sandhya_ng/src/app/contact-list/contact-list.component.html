@@ -1,0 +1,7 @@
+<p>contact-list works!</p>
+<!-- <app-contact
+[labels]="array"
+[details]="profile"> -->
+<h2>{{receivedData  | json}}</h2>
+<app-contact (configUpdated)="receivedChildData($event)">
+</app-contact>

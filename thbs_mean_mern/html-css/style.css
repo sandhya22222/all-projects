@@ -1,0 +1,16 @@
+body {
+ border: 5px rebeccapurple;
+}
+#about-us{
+    border: 1px solid yellowgreen;
+}
+
+#thbs-contact{
+    border:5px dashed green;
+}
+.thbs1{
+    font-size: 40px;
+}
+.thbs2{
+    background-color: aqua;
+}

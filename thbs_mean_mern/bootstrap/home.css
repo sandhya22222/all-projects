@@ -1,0 +1,37 @@
+#header{
+    color: aqua;
+}
+#header .navigation{
+    font-size: 12px;
+    border-color: black;
+}
+#header .logo{
+    font-size: 12px;
+    border-color: green;
+}
+
+
+/* On screens that are 992px wide or less, the background color is blue */
+/* @media screen and (max-width: 992px) {
+    body {
+    background-color: rgb(255, 0, 157);
+    color: white;
+    }
+    } */
+  
+@media (max-width: 600px)and (min-width: 400px){ 
+    body{
+        background-color: brown;
+        color: bisque;
+    }
+}
+
+
+
+    /* On screens that are 600px wide or less, the background color is olive */
+/* @media screen and (max-width: 600px) {
+    body {
+    background-color: olive;
+    color: white;
+    }
+    } */

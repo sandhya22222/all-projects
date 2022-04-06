@@ -1,0 +1,179 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout and Validation</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+   .card-img-top{
+       border-radius: 50%;
+   }
+</style>
+
+<body>
+    <!-- <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.gstatic.com/alkali/apps/bento/images/product_experts_logo_text_v2.png" alt=""
+                    width="120" height="24" class="d-inline-block align-text-top">
+            </a>
+        </div> -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="https://www.gstatic.com/alkali/apps/bento/images/product_experts_logo_text_v2.png" alt=""
+                width="120" height="24" class="d-inline-block align-text-top">
+        </a>
+                  <!--Product Expert</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> -->
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">What it is</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">How it is</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Directory</a>
+                  </li>
+                  <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Sign up</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                  <button  class="btn btn-primary" type="submit">Sign in</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+    <div class="container">
+        <div class="border border-primary"></div>
+        <form>
+
+            <!-- <div class="label" mt-5>Get the <b>TOP POSITION</b>,Place Your AD With Justdial</div> -->
+            <div class="mb-3"></div>
+            <div class="label">Enter your details below</div>
+            <div class="mb-3"></div>
+            <div class="row g-3">
+                <div class="col-8">
+                    <input type="text" class="form-control" placeholder="Company name*" aria-label="Company name*">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Mumbai" aria-label="Mumbai">
+                </div>
+            </div>
+            <div class="mb-3"></div>
+            <div class="row g-3">
+                <div class="col-2">
+                    <input type="text" class="form-select" placeholder="Title" aria-label="Title">
+                    <!-- <option selected>Title</option> -->
+                </div>
+                <div class="col-5">
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                </div>
+                <div class="col-5">
+                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                </div>
+            </div>
+            <div class="mb-3"></div>
+            <div class="row g-3">
+                <div class="col-sm-6">
+                    <label class="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-text">+91</div>
+                        <input type="text" class="form-control" placeholder="MobileNumber">
+                    </div>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="22        Landline num"
+                        aria-label="Landline num">
+                </div>
+            </div>
+            <div class="mb-3"></div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+    </div>
+    </form>
+
+    <!-- <div class="card" style="width: 18rem;">
+        <img src="https://storage.googleapis.com/support-forums-api/avatar/profile-14066-9993303186222854978.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-text" text-align="center">Kamikura</h5>
+        </div>
+      </div> -->
+      
+    
+      <div class="border" style="border: btn-primary; background-color: blue; width:90%; margin-left: 5%;">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <!-- <button   data-bs-target="#exampleModal"> -->
+          <div class="card" style="width: 60%; margin-left: 30%; height: 300px;">
+            <img src="https://storage.googleapis.com/support-forums-api/avatar/profile-14066-9993303186222854978.jpg" class="card-img-top" style="height: 172px;" alt="...">
+            <div class="card-body" >
+              <h5 class="card-text" style="text-align: center;">Kamikura</h5>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p class="card-tet1">Google Account</p>
+            </div>
+            
+        <!--  -->
+         </div>
+        </div>
+    
+        <div class="col">
+          <div class="card" style="width: 60%; margin-left:10%; height: 300px;">
+            <img src=" https://storage.googleapis.com/support-forums-api/avatar/profile-16491-9157518609421319697.png" style="height: 172px;  border-radius:50%;" class="card-img-top" alt="...">
+            <div class="card-body">
+              
+              <h5 class="card-text" style="text-align: center;">hikochang</h5>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p class="card-tet1">Google Account,You tube,+4</p>
+            </div>
+            
+        </div>
+        </div>
+        
+        <div class="col">
+          <div class="card" style="width: 60%; margin-left:5%; height:300px";>
+            <img src="https://storage.googleapis.com/support-forums-api/avatar/profile-586371-12458397316349600365.jpg" style="height: 172px; border-radius:50%;" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-text" style="text-align: center;">Luiz CPJ</h5>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p class="card-tet1">Google Photos,You tube,</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+</body>
+
+</html>

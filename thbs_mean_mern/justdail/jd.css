@@ -1,0 +1,13 @@
+body{
+    background-color: #EFFF;
+}
+.thbs-prod-block
+{
+    width: 20px;
+    height: 50%;
+}
+.thbs-image{
+    /* text-decoration: none; */
+      list-style-type: none;
+    width: 20px;
+}

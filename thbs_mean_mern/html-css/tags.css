@@ -1,0 +1,17 @@
+body{
+    border:1px orange solid;
+}
+p{
+   font-size:24px 
+}
+#thbs-head {
+    background-color:peachpuff;
+}
+#thbs-foot{
+    height: 50px;
+    border: 1px palevioletred solid;
+    background-color: rebeccapurple;
+}
+#thbs-cont{
+    background-color:peachpuff ;
+}
