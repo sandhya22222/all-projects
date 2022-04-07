@@ -7,11 +7,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact-form.component.css']
 })
 export class ContactFormComponent implements OnInit {
+state=['Andhra Pradesh','Karnataka','Telangana'];
+
  myform :FormGroup = new FormGroup ({
-   email :new FormControl('',[Validators.required,Validators.email]),
-   password : new FormControl(),
-   address :new FormControl(),
-   city : new FormControl()
+   email :new FormControl('',[Validators.required,Validators.email,Validators.minLength(8)]),
+   password : new FormControl('',[Validators.required,Validators.minLength(6)]),
+   address :new FormControl('',Validators.required),
+   city : new FormControl('',Validators.required)
  })
 
   constructor() { }
@@ -19,6 +21,6 @@ export class ContactFormComponent implements OnInit {
   ngOnInit(): void {
   }
    getValues(){
-    alert(1)
+    console.log(this.myform)
    }
 }

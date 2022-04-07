@@ -1,31 +1,59 @@
 <div class="border border-primary m-3 p-3">
     {{myform.value|json}}
+    <br>
+    <br>
+    
 <form class="row g-3" [formGroup]="myform">
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
       <input formControlName="email" type="email" class="form-control" id="inputEmail4">
+      <div class="text-danger" *ngIf="myform.controls['email'].touched && myform.controls['email'].invalid"> 
+       <p class="text-info" *ngIf="myform.controls['email'].errors?.['required']"><b>Email is required</b></p> 
+       <p *ngIf="myform.controls['email'].errors?.['email']"><b>Please enter a valid email</b></p>
+       <p *ngIf="myform.controls['email'].errors?.['minlength']"><b>Email Min length should be 8 required</b></p>
+
     </div>
+    </div>
+
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">Password</label>
       <input formControlName="password" type="password" class="form-control" id="inputPassword4">
+
+      <div class="text-danger" *ngIf="myform.controls['password'].touched && myform.controls['password'].invalid">
+        <p class="text-info myform.controls['password'].errors?.['required']"><b>Please enter password</b></p> 
+
+         <p *ngIf="myform.controls['password'].errors?.['minlength']"><b>Please enter valid password</b></p> 
+      </div>
     </div>
+
     <div class="col-12">
       <label for="inputAddress" class="form-label">Address</label>
       <input formControlName="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+   <div  class="text-danger" *ngIf="myform.controls['address'].touched && myform.controls['address'].invalid">
+       <b>Please Enter Address</b>
+   </div>  
+   
     </div>
-    <div class="col-12">
+
+    <!-- <div class="col-12">
       <label for="inputAddress2" class="form-label">Address 2</label>
       <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
+    </div> -->
+
     <div class="col-md-6">
       <label for="inputCity" class="form-label">City</label>
       <input formControlName="city" type="text" class="form-control" id="inputCity">
+      <div  class="text-danger" *ngIf="myform.controls['city'].touched && myform.controls['city'].invalid">
+        <b>Please Enter City</b>
+    </div>  
     </div>
+
     <div class="col-md-4">
       <label for="inputState" class="form-label">State</label>
       <select id="inputState" class="form-select">
-        <option selected>Choose...</option>
-        <option>...</option>
+        
+        <option [value]="state" *ngFor="let state of state">{{state}}</option>
+        
       </select>
     </div>
     <div class="col-md-2">
@@ -41,7 +69,7 @@
       </div>
     </div>
     <div class="form-group m-2">
-        <input (click)="getValues()" type="button" value="Submit" >
+        <button [disabled]="myform.invalid" (click)="getValues()" class="btn btn-primary">Submit</button>
     </div>
   </form>
 </div>
