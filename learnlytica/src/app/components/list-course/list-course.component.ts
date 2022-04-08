@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
@@ -7,13 +7,17 @@ import { ConfigService } from 'src/app/services/config.service';
   styleUrls: ['./list-course.component.css']
 })
 export class ListCourseComponent implements OnInit {
+  // cList:any
+
+  myCourseList:any
 
   constructor(private mconfig:ConfigService) { }
 
   ngOnInit(): void {
     this.mconfig.getCourseList().subscribe(
-      (successdata)=>{
-   console.log(successdata)
+      (sdata)=>{
+  //  console.log(sdata)
+  this.myCourseList=sdata
     });
   }
 
