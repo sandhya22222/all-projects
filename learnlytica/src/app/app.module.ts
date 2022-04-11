@@ -17,6 +17,7 @@ import { AddressComponent } from './components/address/address.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { LoginComponent } from './components/login/login.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
