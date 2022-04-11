@@ -21,6 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './components/register/register.component';
+import { ListProfilesComponent } from './components/list-profiles/list-profiles.component';
+import { MaterialExampleModule } from 'src/materials/materials.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { RegisterComponent } from './components/register/register.component';
     AddressComponent,
     ContactFormComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ListProfilesComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { RegisterComponent } from './components/register/register.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatDialogModule
+    MatDialogModule,
+    MaterialExampleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
