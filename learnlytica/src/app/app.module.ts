@@ -24,6 +24,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ListProfilesComponent } from './components/list-profiles/list-profiles.component';
 import { MaterialExampleModule } from 'src/materials/materials.module';
 import { DetailProfileComponent } from './components/detail-profile/detail-profile.component';
+import { ReactiveComponent } from './components/reactive/reactive.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { DetailProfileComponent } from './components/detail-profile/detail-profi
     LoginComponent,
     RegisterComponent,
     ListProfilesComponent,
-    DetailProfileComponent
+    DetailProfileComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,
