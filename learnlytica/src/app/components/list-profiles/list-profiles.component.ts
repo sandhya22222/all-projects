@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -29,9 +30,10 @@ export class ListProfilesComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
 
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit(): void {
+   
   }
 
 }

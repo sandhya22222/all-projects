@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './components/register/register.component';
 import { ListProfilesComponent } from './components/list-profiles/list-profiles.component';
 import { MaterialExampleModule } from 'src/materials/materials.module';
+import { DetailProfileComponent } from './components/detail-profile/detail-profile.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MaterialExampleModule } from 'src/materials/materials.module';
     ContactFormComponent,
     LoginComponent,
     RegisterComponent,
-    ListProfilesComponent
+    ListProfilesComponent,
+    DetailProfileComponent
   ],
   imports: [
     BrowserModule,
