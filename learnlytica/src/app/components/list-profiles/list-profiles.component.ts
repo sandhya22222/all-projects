@@ -33,6 +33,8 @@ export class ListProfilesComponent implements OnInit {
 
   myUserList: any;
 
+  myTitle:any= 'THBS';
+
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
   userdata: any;

@@ -1,7 +1,13 @@
-{{myUserList | json}}
+<!-- {{myUserList | json}} -->
+<br>
+<h2>
+{{myTitle | title :'react js'}}
+</h2>
+<br>
+
 <ul>
 <li *ngFor="let element of myUserList">
- {{element.name}} ----- > {{element.city}}
+ {{element.name}} ----- > {{element.city | title :'Bangalore'}} ---- > {{element.title | title}}
 </li>
 </ul>
 

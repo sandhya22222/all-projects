@@ -8,6 +8,7 @@ import { ConfigService } from 'src/app/services/config.service';
 })
 export class ListCourseComponent implements OnInit {
   // cList:any
+ 
 
   myCourseList:any
 
