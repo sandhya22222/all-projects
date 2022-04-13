@@ -1,3 +1,10 @@
+{{myUserList | json}}
+<ul>
+<li *ngFor="let element of myUserList">
+ {{element.name}} ----- > {{element.city}}
+</li>
+</ul>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
