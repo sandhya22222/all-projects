@@ -1,0 +1,55 @@
+<div class="container border border-seconday">
+    <pre>
+        valid? {{myFname.valid}}
+        invalid? {{myFname.invalid}}
+        touched? {{myFname.touched}}
+        untouched? {{myFname.untouched}}
+        dirty? {{myFname.dirty}}
+        pristine? {{myFname.pristine}}
+    </pre>
+    <form #f="ngForm" novalidate class=" col-md-8">
+        {{f.value|json}}
+         
+      
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="fname" class="form-control" id="inputEmail4" ngModel name="fname" #myFname="ngModel" required>
+            <div class="text-danger" *ngIf="myFname.touched && myFname.invalid">
+               *please enter a value
+            </div>
+        </div>
+        <div class="form-group">
+            <label>LastName</label>
+            <input type="lname" class="form-control" id="inputPassword4" ngModel name="lname" #mylname="ngModel" required>
+            <div class="text-danger" *ngIf="mylname.touched && mylname.invalid">
+               *please enter a value
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" id="inputPassword4" ngModel name="email" #myemail="ngModel" required>
+            <div class="text-danger" *ngIf="myemail.touched && myemail.invalid">
+                *please enter a value
+             </div>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" id="inputPassword4" ngModel name="password" minlength="6" #mypassword="ngModel" >
+            <div class="text-danger" *ngIf="mypassword.touched && mypassword.invalid">
+                <p *ngIf="mypassword?.errors?.['minlength']">Lastname must be at least 3 characters long</p>
+        </div>
+        </div>
+
+        <div class="form-group">
+            <label>Laguages</label>
+            <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option [value]="langs" *ngFor="let langs of langs">{{langs}}</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <button (click)="getFormsValue (f)" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

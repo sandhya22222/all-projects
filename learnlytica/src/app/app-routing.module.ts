@@ -9,27 +9,30 @@ import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ReactiveComponent } from './components/reactive/reactive.component';
 import { ServicesComponent } from './components/services/services.component';
+import { TemplateFormComponent } from './components/template-form/template-form.component';
 
 const routes: Routes = [
-  { path:'', component: HomeComponent},
+  { path: '', component: HomeComponent },
 
-  {path:'course',component:ListCourseComponent},
+  { path: 'course', component: ListCourseComponent },
 
-  {path:'services',component:ServicesComponent},
+  { path: 'services', component: ServicesComponent },
 
-  {path:'contact',component:ListContactComponent},
+  { path: 'contact', component: ListContactComponent },
 
-  {path:'login',component:LoginComponent},
+  { path: 'login', component: LoginComponent },
 
-  {path:'profile',component:ListProfilesComponent},
+  { path: 'profile', component: ListProfilesComponent },
 
-  {path:'profile/:pid',component:DetailProfileComponent},
+  { path: 'profile/:pid', component: DetailProfileComponent },
 
-  {path:'rxjs',component:ReactiveComponent},
-  
-  {path: '**',component:NotFoundComponent},
-  
-  
+  { path: 'rxjs', component: ReactiveComponent },
+
+  { path: 'template-form', component: TemplateFormComponent },
+
+  { path: '**', component: NotFoundComponent },
+
+
 ];
 
 @NgModule({
