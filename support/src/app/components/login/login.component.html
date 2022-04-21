@@ -1,0 +1,29 @@
+
+<br> <br>
+<div class="container border" style="width: 40%;">
+    <br>
+<form #f="ngForm" novalidate class=" col-md-8">
+
+    <div class="form-group container">
+        <label>Username</label>
+        <input type="fname" class="form-control" id="inputEmail4" ngModel name="fname" #myFname="ngModel" required>
+        <div class="text-danger" *ngIf="myFname.touched && myFname.invalid">
+            *please enter a value
+        </div>
+    </div>
+<br>
+    <div class="form-group container">
+        <label>Password</label>
+        <input type="password" class="form-control" id="inputPassword4" ngModel name="password" minlength="6"
+            #mypassword="ngModel">
+        <div class="text-danger" *ngIf="mypassword.touched && mypassword.invalid">
+            <p *ngIf="mypassword?.errors?.['minlength']">Lastname must be at least 3 characters long</p>
+        </div>
+    </div>
+<br>
+    <div class="col-md-4">
+       &nbsp;&nbsp;<button (click)="getFormsValue (f)" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+<br>
+</div>

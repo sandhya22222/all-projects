@@ -1,0 +1,43 @@
+<br> <br>
+<div class="container border" style="width: 40%;">
+    <br>
+    <form #f="ngForm" novalidate class=" col-md-8">
+
+        <div class="form-group container">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="title" class="form-control" id="exampleFormControlInput1" ngModel name="title"
+                #myTitle="ngModel" required>
+            <div class="text-danger" *ngIf="myTitle.touched && myTitle.invalid">
+                *please enter a value
+            </div>
+        </div>
+
+        <br>
+        <div class="form-group container">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+        </div>
+        <br>
+        &nbsp;&nbsp;<mat-form-field appearance="fill" >
+
+            <mat-label>Priority</mat-label>
+
+            <mat-select disableRipple id="from">
+
+                <mat-option value="Low" id="1">Low</mat-option>
+
+                <mat-option value="Medium" id="2">Medium</mat-option>
+
+                <mat-option value="High" id="3">High</mat-option>
+
+            </mat-select>
+
+        </mat-form-field>
+        <br>
+        <div class="col-md-4">
+            &nbsp;&nbsp;<button (click)="getFormsValue (f)" class="btn btn-primary">Send</button>
+         </div>
+</form>
+    <br>
+</div>

@@ -1,0 +1,10 @@
+<br><br>
+<div class="container">
+    <div *ngFor="let user of userList">
+    {{user|json}}
+    </div>
+
+    <!-- <div *ngFor="let user of userList$ |async; index as i">
+        <h2>{{user.E_id}}--{{user.E_Name}}</h2>
+    </div> -->
+</div>
