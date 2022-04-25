@@ -43,12 +43,11 @@ router.get('/profile', function (req, res, next) {
   })
 
   //------------------
-  router.post('/contact', function (req, res, next) {
-    console.log(req.body);
+ });
+router.post('/contact', function (req, res, next) {
+  console.log(req.body);
 
-    res.send('Registered Successfully');
-  })
-
-});
+  res.send('Registered Successfully');
+})
 
 module.exports = router;
