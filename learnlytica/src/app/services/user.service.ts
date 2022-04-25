@@ -16,4 +16,9 @@ getProfiles(){
   return this.myHttp.get('http://localhost:4200/api/users')  
 }
 
+
+submitContactDetails(data:any){
+  return this.myHttp.post('http://localhost:4200/api/users/contact',data);
+}
+
 }
