@@ -1,4 +1,4 @@
-FROM node 
+FROM node as build-step
 
 WORKDIR /thbs-app
 
@@ -9,4 +9,4 @@ RUN npm install
 RUN npm run build  #generating prod build
 
 FROM nginx:alpine
-COPY --from=node /app/dist/demo-app /usr/share/nginx/html
+COPY --from=build-step /thbs-app/dist/* /usr/share/nginx/html
