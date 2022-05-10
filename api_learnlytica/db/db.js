@@ -1,14 +1,26 @@
  var mysql = require('mysql2');
-let learn = function () {
-   let connection= mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Sandhya_Allu123',
-    database: 'api_learn',
-     insecureAuth : true
+ require('dotenv').config();
 
+
+let mysqlConnect = function () {
+     return mysql.createConnection({
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD, //should be yours 
+        database: process.env.DB_NAME,
+        port: process.env.DB_PORT,
+        insecureAuth: true
     });
-    return connection;
 };
+
+let createTable = `create table if not exists user_profile(
+    id int primary key auto_increment,
+    title varchar(255)not null,
+    completed tinyint(1) not null default 0
+)`;
+
+mysqlConnect().query(createTable, (error, results, fields) => {
+    if (error) throw error;
+});
 
 module.exports.localConnect = learn;
