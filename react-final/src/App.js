@@ -1,6 +1,6 @@
 import './App.css';
-
-import HeaderLayout from './layout/HeaderLayout'
+import { Route, Routes } from 'react-router-dom';
+import HeaderLayout from './layout/HeaderLayout';
 import FooterLayout from './layout/FooterLayout';
 import MainLayout from './layout/MainLayout';
 
