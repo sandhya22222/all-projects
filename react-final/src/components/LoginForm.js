@@ -17,6 +17,10 @@ function LoginForm() {
     {
       username: "user2",
       password: "pass2"
+    },
+    {
+      username: "sandhya",
+      password: "sandhya"
     }
   ];
 
@@ -63,11 +67,13 @@ function LoginForm() {
           <input type="text" name="uname" required />
           {renderErrorMessage("uname")}
         </div>
+        <br></br>
         <div className="input-container">
           <label>Password </label>
           <input type="password" name="pass" required />
           {renderErrorMessage("pass")}
         </div>
+        <br></br>
         <div className="button-container">
           <input type="submit" />
         </div>

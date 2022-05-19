@@ -11,9 +11,9 @@ const Crud = () => {
     ]
 
     const [users, setUsers] = useState(usersData)
-    const [editing,setEditing] = useState(false)
-    const initialFormState ={ id: null, name:'', username:''}
-    const [currentUser, setCurrentUser]= useState(initialFormState)
+    const [editing, setEditing] = useState(false)
+    const initialFormState = { id: null, name: '', username: '' }
+    const [currentUser, setCurrentUser] = useState(initialFormState)
 
     const addUser = (user) => {
         user.id = users.length + 1
@@ -25,21 +25,22 @@ const Crud = () => {
 
     const editRow = (user) => {
         setEditing(true)
-        
+
         setCurrentUser({ id: user.id, name: user.name, username: user.username })
-        }
+    }
 
     return (
 
         <div className='container'>
             <h1> Crud Application Using Hooks</h1>
+            <br></br><br></br>
             <div className='row'>
-
+             
                 <div className='col-6'>
                     <div>
                         <h2>Add User</h2>
                     </div>
-
+                    <br></br>
                     <div>
                         <AddUserForm addUser={addUser} />
                     </div>
