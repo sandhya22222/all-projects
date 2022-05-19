@@ -1,25 +1,22 @@
 import React from "react";
-import{Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default class HeaderLayout extends React.Component{
-    constructor(){
+export default class HeaderLayout extends React.Component {
+    constructor() {
         super();
 
-        this.state={
-            URL:"www.thbs.com",
-            name:"test"
+        this.state = {
+            URL: "www.thbs.com",
+            name: "test"
         };
     }
 
-    render(){
+    render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <a className="navbar-brand" href="#">Navbar</a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
+                <div className="home">
+                    <ul className="home">
                         <li className="nav-item active">
                             <Link to="/">Home Page </Link>
                         </li>
@@ -29,7 +26,12 @@ export default class HeaderLayout extends React.Component{
                         <li className="nav-item">
                             <Link to="/list">List Page</Link>
                         </li>
-
+                        <li className="nav-item">
+                            <Link to="/reg">Registration Page</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/login">Login Page</Link>
+                        </li>
                     </ul>
                 </div>
             </nav>

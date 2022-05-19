@@ -30,3 +30,6 @@ code {
 .nav-item {
   padding: 10px;
 }
+ul{
+  list-style-type: none;
+}

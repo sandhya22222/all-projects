@@ -1,8 +1,9 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+
 import HeaderLayout from './layout/HeaderLayout';
 import FooterLayout from './layout/FooterLayout';
 import MainLayout from './layout/MainLayout';
+import React from 'react';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
 
       <MainLayout></MainLayout>
       <FooterLayout></FooterLayout>
+     
     </div>
   );
 }
